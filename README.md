@@ -168,3 +168,4 @@ yo ng6
 ## License
 
 MIT
+=======
