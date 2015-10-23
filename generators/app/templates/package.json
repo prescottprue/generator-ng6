@@ -10,6 +10,7 @@
     "build:uglify": "uglifyjs dist/app.js -o dist/app.min.js",
     "build:html": "node scripts/build",
     "build": "npm run build:jspm && npm run build:annotate && npm run build:uglify && npm run build:html",
+    "deploy":"npm build && node scripts/deploy",
     "test": "karma start",
     "postinstall": "jspm install"
   },

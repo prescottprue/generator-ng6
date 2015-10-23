@@ -18,7 +18,7 @@ If you are new to ES6 i would suggest you to go throught http://ccoenraets.githu
 * A ready-to-go build system for working with [ES6](https://git.io/es6features)
 * Tasks for generating additional boilerplate Angular components
 * A full testing system in place
-
+* easy deploy to github gh-pages
 
 ### why JSPM?
 JSPM is build on top of  [SystemJS](https://github.com/systemjs/systemjs) which uses polyfill for the ES6 modules. So that means sooner or later browsers will support this natively.
@@ -138,6 +138,14 @@ You can pass in a path relative to `src/app/components/` and your component will
 Running `yo ng6:component app-footer` it will prompt you to enter parent path then if you give it as `../common` will create a `app-footer` component at `src/app/common/app-footer`.
 
 Because `component name` is used to create folder name too, use camel or snakeCase and stay consistent.
+
+
+
+## Deploy
+
+Now you can deploy your compiled output code to the github gh-pages run the command
+`npm run deploy`
+This will push your code to your git repo.
 
 
 #### FAQ
