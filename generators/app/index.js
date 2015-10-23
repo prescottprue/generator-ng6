@@ -1,13 +1,19 @@
 'use strict';
 var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
 var yosay = require('yosay');
+var chalk = require('chalk');
+
 var gen ={};
 
 module.exports = yeoman.generators.Base.extend({
+  // The name `constructor` is important here
+  constructor: function () {
+    yeoman.Base.apply(this, arguments);
+  },
+  // ask app name
   prompting: function () {
-    gen = this;
     var done = this.async();
+    gen = this;
     // Have Yeoman greet the user.
     this.log(yosay(
       'Welcome to the beautiful ' + chalk.red('Ng6') + ' generator!'
@@ -20,42 +26,26 @@ module.exports = yeoman.generators.Base.extend({
       default : this.appname,
       store   : true
     }];
-
+    this.props ='';
     this.prompt(prompts, function (props) {
-      // this.props = props;
-      // To access props later use this.props.someOption;
-      done();
-    },function (answers) {
-      this.config.set({ 'app_name': answers.name});
-      this.log(this.config);
+      this.props = props;
+      this.config.set({ 'app_name': props.name});
       done();
     }.bind(this));
-
 
   },
 
   writing: {
     app: function () {
-      console.log(gen.config.get("app_name"));
       this.fs.copy(
         this.sourceRoot(),
-        gen.config.get("app_name")+'/'+this.destinationRoot()
+        this.destinationRoot()
       );
-    },
-
-    projectfiles: function () {
-      /*this.fs.copy(
-        this.templatePath('editorconfig'),
-        this.destinationPath('.editorconfig')
-      );
-      this.fs.copy(
-        this.templatePath('jshintrc'),
-        this.destinationPath('.jshintrc')
-      );*/
     }
   },
 
   install: function () {
     this.npmInstall();
   },
+
 });

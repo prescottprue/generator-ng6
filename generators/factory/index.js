@@ -14,8 +14,8 @@ module.exports = yeomen.NamedBase.extend({
       var prompts = [{
         type    : 'input',
         name    : 'parent',
-        message : 'Enter path (relative to components/)?',
-        default : 'src/app/components'
+        message : 'Enter path ?',
+        default : 'src/app/common/factories'
       }];
 
       this.prompt(prompts, function (props) {
@@ -25,19 +25,14 @@ module.exports = yeomen.NamedBase.extend({
   },
 
   copy:function(){
-    var componentsPath = 'src/app/components';
-
     var files = [
-      '.component.js',
-      '.controller.js',
-      '.css',
-      '.html','.js','.spec.js'
+      '.factory.js',
     ];
 
     for(var i=0; i< files.length;i++){
       this.fs.copyTpl(
        this.templatePath(files[i]),
-       this.destinationPath(path.join(componentsPath, this.parent, this.name,this.name+files[i] )),
+       this.destinationPath(path.join(this.parent,this.name,this.name+files[i] )),
         {
           name: this.name,
           pascalCase: changeCase.pascalCase(this.name),
@@ -45,8 +40,5 @@ module.exports = yeomen.NamedBase.extend({
         }
      );
     }
-
-
-
   }
 });

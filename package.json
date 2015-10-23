@@ -10,6 +10,10 @@
     "email": "buddhaaravind@gmail.com",
     "url": "https://github.com/dimpu"
   },
+  "files": [
+    "generators/app",
+    "generators/component"
+  ],
   "scripts": {
     "test": "mocha"
   },
@@ -21,8 +25,7 @@
   ],
   "dependencies": {
     "yeoman-generator": "^0.19.0",
-    "chalk": "^1.0.0",
-    "yosay": "^1.0.2"
+    "change-case": "^2.3.0"
   },
   "devDependencies": {
     "mocha": "*"

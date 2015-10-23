@@ -2,7 +2,7 @@ import template from './<%= name %>.html!text';
 import controller from './<%= name %>.controller';
 import './<%= name %>.css!';
 
-let <%= name %>Component = function(){
+let <%= camelCase %>Component = function(){
 	return {
 		template,
 		controller,
@@ -13,4 +13,4 @@ let <%= name %>Component = function(){
 	};
 };
 
-export default <%= name %>Component;
+export default <%= camelCase %>Component;

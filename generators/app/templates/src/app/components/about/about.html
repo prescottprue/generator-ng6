@@ -1,6 +1,17 @@
-<navbar></navbar>
-<h1>{{ vm.name }}</h1>
-<section>
-Aravind
-	This is the about nothing page! Remove me if you don't need me please
-</section>
+
+
+<!--if you'd like to have the navbar and or header on every page, move it up a level to app.html!-->
+<div class="container">
+  <app-header></app-header>
+  <navbar></navbar>
+  <main>
+    <div class="alert alert-dismissible alert-info">
+      <button class="close" data-dismiss="alert" type="button">×</button>
+      <strong>Heads up!</strong>
+      You can find me in
+      {{ vm.name }}.html.
+    </div>
+		This is the about nothing page! Remove me if you don't need me please
+  </main>
+  <app-footer></app-footer>
+</div>
