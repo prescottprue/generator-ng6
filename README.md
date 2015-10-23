@@ -40,7 +40,7 @@ client
 --------home.js * home entry file
 --------home.component.js * directive for home
 --------home.controller.js * controller for home
---------home.styl * styles for home
+--------home.css * styles for home
 --------home.html * template for home
 --------home.spec.js * specs for home
 ----common/ * where common things in our app live
@@ -77,6 +77,12 @@ To initiate the generator go to the folder we you want your project and run the 
 ```bash
 yo ng6
 ```
+By default it you can find home page and about page inside component folder
+
+Your home page will look like below.
+
+![ng6 generate](http://i.imgur.com/6z7MnmA.png "yo ng6")
+
 
 ## Npm tasks
 
@@ -122,18 +128,16 @@ To generate a component, we must use the
 yo ng6:component componentName
 ```
 componentName is the name of the component you want to create. Be sure to be unique, or it will override an existing component.
-The component will be created by default on the root of `client/app/components`.
+The component will be created by default on the root of `src/app/components`.
 
-We can change this by passing in the `--parent` flag.
+We can change this by giving input when it ask for parent location flag.
 
-You can pass in a path relative to `client/app/components/` and your component will be made there.
+You can pass in a path relative to `src/app/components/` and your component will be made there.
 
-So running `yo ng6:component signup --parent auth` will create a `signup` component at `client/app/components/auth/signup`.
 
-Running `yo ng6:component footer --parent ../common` will create a `footer` component at `client/app/common/footer`.
+Running `yo ng6:component app-footer` it will prompt you to enter parent path then if you give it as `../common` will create a `app-footer` component at `src/app/common/app-footer`.
 
-Because `--name` is used to create folder name too, use camel or snakeCase and stay consistent.
-
+Because `component name` is used to create folder name too, use camel or snakeCase and stay consistent.
 
 
 #### FAQ
