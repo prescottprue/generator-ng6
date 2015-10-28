@@ -1,4 +1,4 @@
-# generator-ng6 [![Build Status](https://secure.travis-ci.org/dimpu/generator-ng6.png?branch=master)](https://travis-ci.org/dimpu/generator-ng6)
+# generator-ng6 [![Build Status](https://api.travis-ci.org/dimpu/generator-ng6.svg?branch=master)](https://api.travis-ci.org/dimpu/generator-ng6.svg?branch=master)
 
 > The simple starter [Yeoman](http://yeoman.io) generator for angualr 1.x with ES6.
 
