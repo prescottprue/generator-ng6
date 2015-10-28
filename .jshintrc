@@ -14,7 +14,10 @@
   "undef": true,
   "unused": true,
   "globals":{
-    "require":true
+    "require":true,
+    "describe":true,
+    "it":true,
+    "before":true
   }
 
 }
