@@ -21,7 +21,7 @@
     "generators"
   ],
   "keywords": [
-    "yeoman-generator"
+    "yeoman-generator","es6","angular","components"
   ],
   "dependencies": {
     "yeoman-generator": "^0.19.0",
