@@ -1,24 +1,20 @@
 'use strict';
-
 var path = require('path');
 var assert = require('yeoman-generator').assert;
 var helpers = require('yeoman-generator').test;
-var os = require('os');
+// var os = require('os');
 
 describe('ng6:app', function () {
   before(function (done) {
     helpers.run(path.join(__dirname, '../generators/app'))
-      .withOptions({ skipInstall: true })
-      .withPrompts({ someOption: true })
+      .withPrompts({ name: true })
       .on('end', done);
   });
 
-  it('creates files', function () {
+  it('creates files', function (done) {
     assert.file([
-      'bower.json',
-      'package.json',
-      '.editorconfig',
-      '.jshintrc'
+      'package.json'
     ]);
+    done();
   });
 });
