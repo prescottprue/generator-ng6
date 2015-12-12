@@ -10,7 +10,7 @@
     "build:uglify": "uglifyjs dist/app.js -o dist/app.min.js",
     "build:html": "node scripts/build",
     "build": "npm run build:jspm && npm run build:annotate && npm run build:uglify && npm run build:html",
-    "deploy":"npm build && node scripts/deploy",
+    "deploy": "npm build && node scripts/deploy",
     "test": "karma start",
     "postinstall": "jspm install"
   },
@@ -27,6 +27,7 @@
       "angular": "github:angular/bower-angular@^1.4.7",
       "angular-mocks": "npm:angular-mocks@^1.4.7",
       "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
+      "capaj/systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.5.0",
       "clean-css": "npm:clean-css@^3.4.4",
       "css": "github:systemjs/plugin-css@^0.1.11",
       "json": "github:systemjs/plugin-json@^0.1.0",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "browser-sync": "^2.7.6",
+    "chokidar-socket-emitter": "^0.3.0",
     "change-case": "^2.3.0",
     "jspm": "^0.16.11",
     "karma": "^0.12.36",

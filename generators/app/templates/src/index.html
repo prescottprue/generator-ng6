@@ -17,6 +17,15 @@
   <script src="jspm.config.js"></script>
   <script>
     System.import('app/app').catch(console.error.bind(console));
+    if(location.origin.match(/localhost/)) {
+       System.trace = true;
+       System.import('capaj/systemjs-hot-reloader').then(HotReloader => {
+         System.hotReloader = new HotReloader.default('http://localhost:8081/');
+         System.hotReloader.on('change', function (name) {
+           console.log(name, 'changed');
+         });
+       });
+     }
   </script>
   <!-- endbuild -->
 </body>

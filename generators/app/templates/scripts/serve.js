@@ -1,13 +1,20 @@
 var
   browserSync = require('browser-sync');
+var root = 'src';
+
+require('chokidar-socket-emitter')({
+  port: 8081,
+  path: root,
+  relativeTo: root
+});
+
 // server file throught browserSync
 browserSync({
   server: {
-  baseDir: 'src',
-  routes: {
-    '/jspm.config.js': './jspm.config.js',
-    '/jspm_packages': './jspm_packages'
+    baseDir: root,
+    routes: {
+      '/jspm.config.js': './jspm.config.js',
+      '/jspm_packages': './jspm_packages'
     }
-  },
-  files: ['src/**/*.html', 'src/**/*.css', 'src/**/*.js']
+  }
 });

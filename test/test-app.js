@@ -10,11 +10,12 @@ describe('ng6:app', function () {
       .withPrompts({ name: true })
       .on('end', done);
   });
-
+  
   it('creates files', function (done) {
     assert.file([
       'package.json'
     ]);
     done();
   });
+
 });
