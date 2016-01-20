@@ -1,57 +1,41 @@
 {
   "name": "generator-ng6",
   "version": "1.0.0",
-  "description": "angualr component devlopment pack with jspm,es6,bootstrap",
-  "dependencies": {},
+  "description": "angualr component devlopment pack with browserify,es6,bootstrap",
+  "main": "index.js",
   "scripts": {
-    "start": "node scripts/serve",
-    "build:jspm": "jspm bundle-sfx src/app/app.js dist/app.js",
-    "build:annotate": "ng-annotate --add dist/app.js -o dist/app.js --sourcemap --sourceroot 'app.js.map'",
-    "build:uglify": "uglifyjs dist/app.js -o dist/app.min.js",
-    "build:html": "node scripts/build",
-    "build": "npm run build:jspm && npm run build:annotate && npm run build:uglify && npm run build:html",
-    "deploy": "npm build && node scripts/deploy",
-    "test": "karma start",
-    "postinstall": "jspm install"
+    "start": "watchify  src/app/app.js -o dist/app.min.js  -t babelify  -t stringify -t browserify-css --debug",
+    "serve": "budo src/index.js --serve=app/app.js --live --open -- -t babelify -t browserify-css -t stringify --debug",
+    "build:index":"node server/build.js",
+    "build:browsfy": "browserify src/app/app.js -o dist/app.js  -t babelify -t browserify-css -t stringify -t stripify -t  browserify-ngmin",
+    "build:uglify": "uglifyjs ./dist/app.js ---compress  -o ./dist/app.min.js",
+    "build": "npm run build:index && npm run build:browsfy && npm run build:uglify",
+    "test": "karma test"
   },
+  "dependencies": {},
   "keywords": [
     "angular",
-    "jspm",
+    "npm",
     "es6"
   ],
   "author": "Aravind Buddha",
   "license": "ISC",
-  "jspm": {
-    "configFile": "jspm.config.js",
-    "dependencies": {
-      "angular": "github:angular/bower-angular@^1.4.7",
-      "angular-mocks": "npm:angular-mocks@^1.4.7",
-      "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
-      "capaj/systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.5.0",
-      "clean-css": "npm:clean-css@^3.4.4",
-      "css": "github:systemjs/plugin-css@^0.1.11",
-      "json": "github:systemjs/plugin-json@^0.1.0",
-      "text": "github:systemjs/plugin-text@^0.0.2"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.25",
-      "babel-runtime": "npm:babel-runtime@^5.8.25",
-      "core-js": "npm:core-js@^1.2.1"
-    }
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-route": "^1.4.8",
+    "angular-ui-router": "^0.2.15"
   },
   "devDependencies": {
-    "browser-sync": "^2.7.6",
-    "chokidar-socket-emitter": "^0.3.0",
-    "change-case": "^2.3.0",
-    "jspm": "^0.16.11",
-    "karma": "^0.12.36",
-    "karma-chai": "^0.1.0",
-    "karma-chrome-launcher": "^0.1.12",
-    "karma-jspm": "^1.1.5",
-    "karma-mocha": "^0.1.10",
-    "karma-mocha-reporter": "^1.0.2",
-    "ng-annotate": "^1.0.2",
-    "node-useref": "^0.3.15",
-    "yargs": "^3.10.0"
+    "babel-preset-es2015": "^6.0.15",
+    "babelify": "^7.2.0",
+    "browserify-css": "^0.8.3",
+    "browserify-ngmin": "^0.1.0",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-mocha": "^0.2.1",
+    "mocha": "^2.3.4",
+    "stringify": "^3.2.0",
+    "stripify": "^3.0.0",
+    "uglify-js": "^2.6.1",
+    "watchify": "^3.6.1"
   }
 }

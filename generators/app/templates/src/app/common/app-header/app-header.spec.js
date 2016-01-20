@@ -5,7 +5,7 @@ import 'angular-mocks';
 import AppHeaderModule from './app-header';
 import AppHeaderController from './app-header.controller';
 import AppHeaderComponent from './app-header.component';
-import AppHeaderTemplate from './app-header.html!text';
+import AppHeaderTemplate from './app-header.html';
 
 describe('AppHeader', ()=>{
 	let $rootScope,

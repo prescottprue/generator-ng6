@@ -1,6 +1,6 @@
-import template from './app-header.html!text';
+import template from './app-header.html';
 import controller from './app-header.controller';
-import './app-header.css!';
+import './app-header.css';
 
 let appHeaderComponent = function(){
 	return {

@@ -5,7 +5,7 @@ import 'angular-mocks';
 import HomeModule from './home'
 import HomeController from './home.controller';
 import HomeComponent from './home.component';
-import HomeTemplate from './home.html!text';
+import HomeTemplate from './home.html';
 
 describe('Home', ()=>{
 	let $rootScope,

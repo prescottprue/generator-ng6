@@ -5,7 +5,7 @@ import 'angular-mocks';
 import <%= pascalCase %>Module from './<%= name %>';
 import <%= pascalCase %>Controller from './<%= name %>.controller';
 import <%= pascalCase %>Component from './<%= name %>.component';
-import <%= pascalCase %>Template from './<%= name %>.html!text';
+import <%= pascalCase %>Template from './<%= name %>.html';
 
 describe('<%= pascalCase %>', ()=>{
 	let $rootScope,

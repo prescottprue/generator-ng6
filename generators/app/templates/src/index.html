@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>yeoman-ng6-generator</title>
+  <title>Yeoman ng6 Generator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
   <link href="https://bootswatch.com/darkly/bootstrap.min.css" rel="stylesheet">
@@ -12,21 +12,9 @@
 </head>
 <body>
   <app></app>
+
   <!-- build:js -->
-  <script src="jspm_packages/system.js"></script>
-  <script src="jspm.config.js"></script>
-  <script>
-    System.import('app/app').catch(console.error.bind(console));
-    if(location.origin.match(/localhost/)) {
-       System.trace = true;
-       System.import('capaj/systemjs-hot-reloader').then(HotReloader => {
-         System.hotReloader = new HotReloader.default('http://localhost:8081/');
-         System.hotReloader.on('change', function (name) {
-           console.log(name, 'changed');
-         });
-       });
-     }
-  </script>
+  <script src="./app.min.js"></script>
   <!-- endbuild -->
 </body>
 </html>

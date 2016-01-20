@@ -1,19 +1,17 @@
 [{
     "title": "JSPM",
-    "img": "http://s8.postimg.org/59ifwo2xd/jspm.png",
+    "img": "http://s8.postimg.org/59ifwo2xd/jspm.png"
   }, {
     "title": "NPM",
-    "img": "http://s15.postimg.org/625qftldj/Rg6_WLgqcc_B.png",
+    "img": "http://s15.postimg.org/625qftldj/Rg6_WLgqcc_B.png"
   }, {
     "title": "Yo",
-    "img": "http://s27.postimg.org/xtz0316b3/image.png",
+    "img": "http://s27.postimg.org/xtz0316b3/image.png"
   }, {
     "title": "NG",
-    "img": "http://s15.postimg.org/3z9jwr6nr/angular_js.png",
+    "img": "http://s15.postimg.org/3z9jwr6nr/angular_js.png"
   }, {
     "title": "ES6",
-    "img": "http://s7.postimg.org/7r0rrf0tj/es6_logo_283x300.png",
+    "img": "http://s7.postimg.org/7r0rrf0tj/es6_logo_283x300.png"
   }
-
-
 ]
