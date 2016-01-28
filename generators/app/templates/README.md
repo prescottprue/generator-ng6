@@ -7,7 +7,7 @@
 ### What is ng6?
 A simple starter for angular 1.x with es6. This is a simple yomen generator for those who are looking for using ES6 with angular 1.x
 
-If you are new to ES6 i would suggest you to go throught http://ccoenraets.github.io/es6-tutorial/ or https://www.youtube.com/watch?v=CozSF5abcTA
+If you are new to ES6 I would suggest you to go through http://ccoenraets.github.io/es6-tutorial/ or https://www.youtube.com/watch?v=CozSF5abcTA
 
 **Features:**
 * Web Component approach.
@@ -33,7 +33,7 @@ client
 --------home.js * home entry file
 --------home.component.js * directive for home
 --------home.controller.js * controller for home
---------home.styl * styles for home
+--------home.css * styles for home
 --------home.html * template for home
 --------home.spec.js * specs for home
 ----common/ * where common things in our app live
@@ -51,7 +51,7 @@ To run test just `npm test` or `karma start`. Read more about testing [below](#t
 ## Installing
 What do you need to run this:
 * `node` or 'iojs' and `npm`
-Once you have those, you should install these globals:
+Once you have those, you should install these global npm packages:
 * `npm i -g browserify`
 * `npm i -g budo`
 * `npm i -g karma`
@@ -70,8 +70,6 @@ yo ng6
 ```
 
 ## Npm tasks
-
-Most of the heavy lifting is done by jspm so we don't think we need to use Gulp or Grunt instead we are using npm tasks.
 
 We will have following commands.
 
@@ -111,14 +109,14 @@ You can create all this by hand, but it gets old fast!
 To generate a component, we must use the
 
 ```bash
-yo ng6:component componentName
+yo ng6:component component-name
 ```
-componentName is the name of the component you want to create. Be sure to be unique, or it will override an existing component.
+component-name is the name of the component you want to create. Be sure to be unique, or it will override an existing component.
 The component will be created by default on the root of `app/components`.
 
 You can pass in a path relative to `app/components/` and your component will be made there.
 
-So running `yo ng6:component signup` will create a `signup` component at `client/app/components/auth/signup`.
+So running `yo ng6:component signup` will create a `signup` component at `client/app/components/signup`.
 
 Running `yo ng6:component footer` and if you give path as`  ../common` will create a `footer` component at `app/common/footer`.
 

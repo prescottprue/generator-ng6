@@ -1,5 +1,6 @@
 import index from './index.html';
 import './app/app';
+
 var html = document.createElement('html');
 html.innerHTML = index;
 var head = html.getElementsByTagName('head')[0].innerHTML;
