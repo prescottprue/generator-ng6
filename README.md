@@ -40,7 +40,7 @@ client
 ```
 
 ## Testing Setup
-All test are written in ES6 too because why not! We use JSPM to take care of all the logistics of getting those files run in browsers just like our client files. Our setup is:
+All test are written in ES6 too because why not! We use Babelify to take care of all the logistics of getting those files run in browsers just like our client files. Our setup is:
 
 * Karma
 * Mocha

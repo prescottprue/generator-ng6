@@ -1,4 +1,4 @@
-import buildWith from './build-with.json!';
+import buildWith from './build-with.json';
 
 class HomeController {
 	constructor(){
