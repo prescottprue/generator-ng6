@@ -1,8 +1,8 @@
 class <%= pascalCase %>Controller {
-	constructor(){
-		this.name = '<%= name %>';
+	constructor () {
+		this.name = '<%= name %>'
 	}
 }
 
 
-export default <%= pascalCase %>Controller;
+export default <%= pascalCase %>Controller

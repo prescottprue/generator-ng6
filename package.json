@@ -1,14 +1,14 @@
 {
-  "name": "generator-ng6",
-  "version": "1.1.3",
-  "description": "Yeoman generator",
+  "name": "generator-ng6s",
+  "version": "1.0.0",
+  "description": "Angular component devlopment pack with browserify, es6, bootstrap that follows js-standard",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "dimpu/generator-ng6",
+  "repository": "prescottprue/generator-ng6",
   "author": {
-    "name": "Aravind Buddha",
-    "email": "buddhaaravind@gmail.com",
-    "url": "https://github.com/dimpu"
+    "name": "Prescott Prue",
+    "email": "sprue.dev@gmail.com",
+    "url": "https://github.com/prescottprue"
   },
   "files": [
     "generators"
@@ -20,7 +20,9 @@
     "yeoman-generator",
     "es6",
     "angular",
-    "components"
+    "components",
+    "js-standard",
+    "standard"
   ],
   "dependencies": {
     "chalk": "^1.1.1",

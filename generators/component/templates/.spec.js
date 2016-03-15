@@ -1,64 +1,64 @@
 // Have to import angular first before angular-mocks
 // https://github.com/Workiva/karma-jspm/issues/23
-import angular from 'angular';
-import 'angular-mocks';
-import <%= pascalCase %>Module from './<%= name %>';
-import <%= pascalCase %>Controller from './<%= name %>.controller';
-import <%= pascalCase %>Component from './<%= name %>.component';
-import <%= pascalCase %>Template from './<%= name %>.html';
+import angular from 'angular'
+import 'angular-mocks'
+import <%= pascalCase %>Module from './<%= name %>'
+import <%= pascalCase %>Controller from './<%= name %>.controller'
+import <%= pascalCase %>Component from './<%= name %>.component'
+import <%= pascalCase %>Template from './<%= name %>.html'
 
-describe('<%= pascalCase %>', ()=>{
+describe('<%= pascalCase %>', () => {
 	let $rootScope,
 	makeController;
 
-	beforeEach(angular.mock.module(<%= pascalCase %>Module.name));
-	beforeEach(angular.mock.inject((_$rootScope_)=>{
-		$rootScope = _$rootScope_;
-		makeController = ()=>{
+	beforeEach(angular.mock.module(<%= pascalCase %>Module.name))
+	beforeEach(angular.mock.inject((_$rootScope_) => {
+		$rootScope = _$rootScope_
+		makeController = () => {
 			return new <%= pascalCase %>Controller();
-		};
-	}));
+		}
+	}))
 
-	describe('Module', ()=>{
+	describe('Module', () => {
 		// test things about the component module
 		// checking to see if it registers certain things and what not
 		// test for best practices with naming too
 		// test for routing
-	});
+	})
 
-	describe('Controller', ()=>{
+	describe('Controller', () => {
 		// test your controller here
 
-		it('should have a name property [REMOVE]', ()=>{ // erase me if you remove this.name from the controller
-			let controller = makeController();
+		it('should have a name property [REMOVE]', () => { // erase me if you remove this.name from the controller
+			let controller = makeController()
 
-			expect(controller).to.have.property('name');
-		});
-	});
+			expect(controller).to.have.property('name')
+		})
+	})
 
-	describe('Template', ()=>{
+	describe('Template', () => {
 		// test the template
 		// use Regexes to test that you are using the right bindings {{  }}
 
-		it('should have name in template [REMOVE]', ()=>{
+		it('should have name in template [REMOVE]', () => {
 			expect(<%= pascalCase %>Template).to.match(/{{\s?vm\.name\s?}}/g);
 		});
 	});
 
 
-	describe('Component', ()=>{
+	describe('Component', () => {
 			// test the component/directive itself
 			let component = <%= pascalCase %>Component();
 
-			it('should use the right template',()=>{
+			it('should use the right template',() => {
 				expect(component.template).to.equal(<%= pascalCase %>Template);
 			});
 
-			it('should use controllerAs', ()=>{
+			it('should use controllerAs', () => {
 				expect(component).to.have.property('controllerAs');
 			});
 
-			it('should use the right controller', ()=>{
+			it('should use the right controller', () => {
 				expect(component.controller).to.equal(<%= pascalCase %>Controller);
 			});
 	});

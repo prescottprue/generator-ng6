@@ -1,7 +1,7 @@
 {
-  "name": "generator-ng6",
-  "version": "1.0.0",
-  "description": "angualr component devlopment pack with browserify,es6,bootstrap",
+  "name": "<%= appname %>",
+  "version": "0.0.1",
+  "description": "Angular component devlopment pack with browserify, es6, bootstrap that follows js-standard",
   "main": "index.js",
   "scripts": {
     "start": "watchify  src/app/app.js -o dist/app.min.js  -t babelify  -t stringify -t browserify-css --debug",
@@ -18,8 +18,8 @@
     "npm",
     "es6"
   ],
-  "author": "Aravind Buddha",
-  "license": "ISC",
+  "author": "Prescott Prue",
+  "license": "MIT",
   "dependencies": {
     "angular": "^1.4.8",
     "angular-route": "^1.4.8",

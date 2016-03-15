@@ -1,6 +1,6 @@
-import template from './<%= name %>.html';
-import controller from './<%= name %>.controller';
-import './<%= name %>.css';
+import template from './<%= name %>.html'
+import controller from './<%= name %>.controller'
+import './<%= name %>.css'
 
 let <%= camelCase %>Component = function(){
 	return {
@@ -10,7 +10,7 @@ let <%= camelCase %>Component = function(){
 		controllerAs: 'vm',
 		scope: {},
 		bindToController: true
-	};
-};
+	}
+}
 
-export default <%= camelCase %>Component;
+export default <%= camelCase %>Component
