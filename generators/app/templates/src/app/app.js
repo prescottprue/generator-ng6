@@ -1,15 +1,15 @@
-import angular from 'angular';
-import 'angular-ui-router';
-import Common from './common/common';
-import Components from './components/components';
-import AppComponent from './app.component';
+import angular from 'angular'
+import 'angular-ui-router'
+import Common from './common/common'
+import Components from './components/components'
+import AppComponent from './app.component'
 
 let appModule = angular.module('app', [
-	'ui.router',
-	Common.name,
-	Components.name
+  'ui.router',
+  Common.name,
+  Components.name
 ])
-.directive('app', AppComponent);
+.directive('app', AppComponent)
 
 /*
  * As we are using ES6 with Angular 1.x we can't use ng-app directive
@@ -18,9 +18,9 @@ let appModule = angular.module('app', [
  */
 
 angular.element(document).ready(() => {
-	angular.bootstrap(document, [appModule.name], {
-		  // strictDi: true
-		});
-});
+  angular.bootstrap(document, [appModule.name], {
+      // strictDi: true
+    })
+})
 
-export default appModule;
+export default appModule
