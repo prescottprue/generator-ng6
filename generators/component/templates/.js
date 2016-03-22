@@ -3,17 +3,17 @@ import 'angular-ui-router'
 import <%= pascalCase %>Component from './<%= name %>.component'
 
 let <%= camelCase %>Module = angular.module('<%= name %>', [
-	'ui.router'
+  'ui.router'
 ])
 /* // uncomment this for route
 .config(($stateProvider, $urlRouterProvider)=>{
-	$urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/');
 
-	$stateProvider
-		.state('<%= name %>', {
-			url: '/',
-			template: '<<%= name %>></<%= name %>>'
-		});
+  $stateProvider
+    .state('<%= name %>', {
+      url: '/',
+      template: '<<%= name %>></<%= name %>>'
+    });
 })
 */
 .directive('<%= camelCase %>', <%= pascalCase %>Component)

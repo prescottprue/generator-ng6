@@ -1,11 +1,18 @@
-# generator-ng6 [![Build Status](https://secure.travis-ci.org/dimpu/generator-ng6.png?branch=master)](https://travis-ci.org/dimpu/generator-ng6)
+# <%= appname %>
+
+[![NPM version][npm-image]][npm-url]
+[![NPM downloads][npm-downloads-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+[![License][license-image]][license-url]
+[![Code Style][code-style-image]][code-style-url]
 
 > The simple starter [Yeoman](http://yeoman.io) generator for angualr 1.x with ES6.
 
 
 ## Getting Started
 ### What is ng6?
-A simple starter for angular 1.x with es6. This is a simple yomen generator for those who are looking for using ES6 with angular 1.x
+A simple starter for angular 1.x with es6. This is a simple yeomen generator for those who are looking for using ES6 with angular 1.x
 
 If you are new to ES6 I would suggest you to go through http://ccoenraets.github.io/es6-tutorial/ or https://www.youtube.com/watch?v=CozSF5abcTA
 
@@ -114,32 +121,41 @@ yo ng6:component component-name
 component-name is the name of the component you want to create. Be sure to be unique, or it will override an existing component.
 The component will be created by default on the root of `app/components`.
 
-You can pass in a path relative to `app/components/` and your component will be made there.
+You can pass in a path relative to `src/app` and your component will be made there.
 
-So running `yo ng6:component signup` will create a `signup` component at `client/app/components/signup`.
+So running `yo ng6s:component signup` will create a `signup` component at `client/app/components/signup` by default (same as giving the path 'components')
 
-Running `yo ng6:component footer` and if you give path as`  ../common` will create a `footer` component at `app/common/footer`.
-
-
+Running `yo ng6s:component footer` and if you give path as `common` will create a `footer` component at `app/common/footer`.
 
 ### Yeoman Generators
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-ng6 from npm, run:
+To install generator-ng6s from npm, run:
 
 ```bash
-npm install -g generator-ng6
+npm install -g generator-ng6s
 ```
 
 Finally, initiate the generator:
 
 ```bash
-yo ng6
+yo ng6s
 ```
 
 
 ## License
 
 MIT
-=======
+
+[npm-image]: https://img.shields.io/npm/v/<%=appname%>.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/<%=appname%>
+[npm-downloads-image]: https://img.shields.io/npm/dm/<%=appname%>.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/<%=githubUser%>/<%=appname%>/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/<%=githubUser%>/<%=appname%>
+[daviddm-image]: https://img.shields.io/david/<%=githubUser%>/<%=appname%>.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/<%=githubUser%>/<%=appname%>
+[license-image]: https://img.shields.io/npm/l/<%=appname%>.svg?style=flat-square
+[license-url]: https://github.com/<%=githubUser%>/<%=appname%>/blob/master/LICENSE
+[code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[code-style-url]: http://standardjs.com/

@@ -13,7 +13,7 @@ module.exports = yeoman.generators.Base.extend({
     var done = this.async()
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the beautiful ' + chalk.red('Ng6') + ' generator!'
+      'Welcome to the beautiful ' + chalk.red('Ng6s') + ' generator!'
     ))
 
     var prompts = [
@@ -22,6 +22,13 @@ module.exports = yeoman.generators.Base.extend({
         name: 'name',
         message: 'Your project name ?',
         default: this.appname,
+        store: true
+      },
+      {
+        type: 'input',
+        name: 'githubUser',
+        message: 'Your is your Github Username ?',
+        default: 'prescottprue',
         store: true
       }
     ]

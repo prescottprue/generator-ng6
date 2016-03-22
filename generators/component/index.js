@@ -5,7 +5,7 @@ var changeCase = require('change-case')
 module.exports = yeomen.NamedBase.extend({
   constructor: function () {
     yeomen.NamedBase.apply(this, arguments)
-    this.name = changeCase.paramCase(this.name)
+    this.name = changeCase.camelCase(this.name)
   },
   promptName: function () {
     var done = this.async()
@@ -14,19 +14,19 @@ module.exports = yeomen.NamedBase.extend({
       {
         type: 'input',
         name: 'parent',
-        message: 'Enter path (relative to components/)?',
-        default: 'src/app/components'
+        message: 'Enter path (relative to src/app)?',
+        default: 'components'
       }
     ]
 
-    this.prompt(prompts, function (props) {
+    this.prompt(prompts, props => {
       this.parent = props.parent
       done()
-    }.bind(this))
+    })
   },
 
   copy: function () {
-    const componentsPath = 'src/app/components'
+    const appPath = 'src/app'
 
     const files = [
       '.component.js',
@@ -35,10 +35,10 @@ module.exports = yeomen.NamedBase.extend({
       '.html', '.js', '.spec.js'
     ]
 
-    files.forEach((file) => {
+    files.forEach(file => {
       this.fs.copyTpl(
        this.templatePath(file),
-       this.destinationPath(path.join(componentsPath, this.parent, this.name, this.name + file)),
+       this.destinationPath(path.join(appPath, this.parent, this.name, this.name + file)),
         {
           name: this.name,
           pascalCase: changeCase.pascalCase(this.name),
