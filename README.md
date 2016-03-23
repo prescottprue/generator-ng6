@@ -1,10 +1,17 @@
-# generator-ng6 [![Build Status](https://secure.travis-ci.org/dimpu/generator-ng6.png?branch=master)](https://travis-ci.org/dimpu/generator-ng6)
+# generator-ng6s
+
+[![NPM version][npm-image]][npm-url]
+[![NPM downloads][npm-downloads-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+[![License][license-image]][license-url]
+[![Code Style][code-style-image]][code-style-url]
 
 > The simple starter [Yeoman](http://yeoman.io) generator for angualr 1.x with ES6.
 
 
 ## Getting Started
-### What is ng6?
+### What is ng6s?
 A simple starter for angular 1.x with es6. This is a simple yomen generator for those who are looking for using ES6 with angular 1.x
 
 If you are new to ES6 I would suggest you to go through http://ccoenraets.github.io/es6-tutorial/ or https://www.youtube.com/watch?v=CozSF5abcTA
@@ -13,8 +20,8 @@ If you are new to ES6 I would suggest you to go through http://ccoenraets.github
 * Web Component approach.
 * Package management with npm [NPM](http://npmjs.org)
 * The best practice in directory/file organization for Angular
-* For both small and large scale applications.
-* ES6 to ES5 conversion using browserify with babel.
+* For both small and large scale applications
+* ES6 to ES5 conversion using browserify with babel
 * A ready-to-go build system for working with [ES6](https://git.io/es6features)
 * Tasks for generating additional boilerplate Angular components
 * A full testing system in place
@@ -50,23 +57,21 @@ To run test just `npm test` or `karma start`. Read more about testing [below](#t
 
 ## Installing
 What do you need to run this:
-* `node` or 'iojs' and `npm`
+* [NodeJS](https://nodejs.org/en/)
 Once you have those, you should install these global npm packages:
-* `npm i -g browserify`
-* `npm i -g budo`
 * `npm i -g karma`
 * `npm i -g karma-cli`
 
-To install generator-ng6 from npm, run:
+To install generator-ng6s from npm, run:
 
 ```bash
-npm install -g generator-ng6
+npm install -g generator-ng6s
 ```
 ## How to use it?
 To initiate the generator go to the folder we you want your project and run the following command.
 
 ```bash
-yo ng6
+yo ng6s
 ```
 
 ## Npm tasks
@@ -74,19 +79,15 @@ yo ng6
 We will have following commands.
 
 ```bash
-  npm Start
+  npm start
   ```
-  this will start code compilation while you make changes to your files. Use this command if you already have a server running. For example if you want to use Xampp or vangrant as your main server this is for you.
+  this will start the production server
 
-  ```bash
-    npm run serve
-    ```
+```bash
+  npm run production
+  ```
+    this will start the live reloading dev server
 
- This will starts a dev server with `budo` (a browserify dev server).
-
- ```bash
- npm run build
- ```
 build your code for production it will generate only two file app.min.js and index.html
 
 ```bash
@@ -139,7 +140,17 @@ yo ng6
 ```
 
 
-## License
+## [License](https://github.com/prescottprue/generator-ng6s/blob/master/LICENSE)
 
-MIT
-=======
+
+[npm-image]: https://img.shields.io/npm/v/generator-ng6s.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/generator-ng6s
+[npm-downloads-image]: https://img.shields.io/npm/dm/generator-ng6s.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/prescottprue/generator-ng6s/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/prescottprue/generator-ng6s
+[daviddm-image]: https://img.shields.io/david/prescottprue/generator-ng6s.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/prescottprue/generator-ng6s
+[license-image]: https://img.shields.io/npm/l/generator-ng6s.svg?style=flat-square
+[license-url]: https://github.com/prescottprue/generator-ng6s/blob/master/LICENSE
+[code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
+[code-style-url]: http://standardjs.com/
